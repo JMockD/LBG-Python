@@ -1,4 +1,4 @@
-hello trying to run a jobin JENKINS
+hello trying to run a job in JENKINS again
 # REST API starter
 
 This application is the start point for Sprint 1 of the Lloyds Bank Group Modern Engineering Bootcamp Project Specification.
