@@ -1,11 +1,11 @@
 version: latest
 services:
-app:
-  build:
-    context:
-    dockerfile: Dockerfile
+flask-app:
+  build: .
   ports:
-    - 8080:8080
+  target: 80
+      published: 
+      protocol: tcp
   depends_on:
     - db
   environment:
