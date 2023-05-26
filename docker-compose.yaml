@@ -17,9 +17,9 @@ flask-app:
     volumes:
       - ./data:/var/lib/postgresq1/data
     environment:
-    
-    
-    
+      - POSTGRES_USER=jannette
+      - POSTGRESS_DB=databasejannette
+  
       
   
   nginx:
@@ -32,5 +32,7 @@ flask-app:
     - type: bind
       source: ./nginx.conf
       target: /etc/nginx/nginx.con
+    depends_on:
+      app
 
    
