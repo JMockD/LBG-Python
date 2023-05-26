@@ -23,14 +23,14 @@ flask-app:
   nginx:
     image: nginx:alpine
     ports:
-    - target: 80
-      protocol: tcp
+    - 80:80
+  
       
     volumes:
     - type: bind
       source: ./nginx.conf
       target: /etc/nginx/nginx.con
     depends_on:
-      app
+     - app
 
    
