@@ -16,7 +16,7 @@ ENV YOUR_NAME=jannetteENV
 
 # Expose the correct port
 
-EXPOSE 5000
+EXPOSE 8080
 
 # Create an entrypoint
 
