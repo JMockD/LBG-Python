@@ -18,6 +18,8 @@ app:
       - ./data:/var/lib/postgresq1/data
     environment:
     
+    
+    
       
   
   nginx:
@@ -25,4 +27,10 @@ app:
     ports:
     - target: 80
       protocol: tcp
+      
+    volumes:
+    - type: bind
+      source: ./nginx.conf
+      target: /etc/nginx/nginx.con
+
    
