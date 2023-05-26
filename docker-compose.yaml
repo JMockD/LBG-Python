@@ -1,28 +1,13 @@
 version: latest
 services:
-  app:
-    build:
-     context: .
-     dockerfile:  Docker
-  ports:
-    - 8080:8080
-    
+ 
+ flask-app:
+    build: .
+    ports:
+    - target: 5000
+      published: 5000
+      protocol: tcp
   
-  depends_on:
-    - db
-  environment:
-    - SQLALCHEMY_DATABASE_URI=sqlite:///data.db
-    - SQLALCHEMY_TRACK_MODIFICATIONS=FALSE
-    
-  db:
-    image: postgres:latest
-    volumes:
-      - ./data:/var/lib/postgresq1/data
-    environment:
-      - POSTGRES_USER=jannette
-      - POSTGRESS_DB=databasejannette
-  
-      
   
   nginx:
     image: nginx:alpine
